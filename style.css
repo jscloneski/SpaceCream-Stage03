@@ -5,8 +5,8 @@
 }
 
 :root {
-    --ff-title: font-family: 'Staatliches', cursive;
-    --ff-texting: font-family: 'Palanquin', sans-serif;
+    --ff-title: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin', sans-serif;
 
     font-size: 62.5% ;
     --fs-title1: 4.0rem;
@@ -17,28 +17,42 @@
     --bg-top: #8E9AAF;
 }
 
+body {
+    background-color: var(--bg-primary);
+}
+
+body::before {
+    content: '';
+    background-color: var(--bg-top);
+    position: absolute;
+    width: 100vw;
+    height: 32rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .page, header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 1.0rem;
 }
 
-.subtitle {
-    text-align: center;
+header {
+    margin-top: 3.2rem;
 }
 
-main {
-    max-width: 32rem;
-    height: auto;
+header img {
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
 }
-
-img {
-    max-width: 32rem;
-}
-
 
 header h1 {
+    margin-top: 2.0rem;
+    width: 100vw;
+
     font-size: var(--fs-title1);
     font-family: var(--ff-title);
     text-transform: uppercase;
@@ -53,17 +67,39 @@ header h1 {
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-body {
-    background-color: var(--bg-primary);
+.subtitle {
+    font-family: var(--ff-texting);
+    font-size: var(--fs-text);
+
+    color: #23053A;
+
+    margin-top: 5.0rem;
+    text-align: center;
 }
 
-body::before {
-    content: '';
-    background-color: var(--bg-top);
-    position: absolute;
-    width: 100vw;
-    height: 280px;
-    top: 0;
-    left: 0;
-    z-index: -1;
+main {
+    margin-top: 6.3rem;
+
+    max-width: 32rem;
+    height: auto;
+}
+
+img {
+    max-width: 32rem;
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    border-radius: 2.0rem;
+    object-fit: cover;
+    transition: all 500ms;
+    filter: brightness(0.5);
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    filter: blur(1px);
 }
