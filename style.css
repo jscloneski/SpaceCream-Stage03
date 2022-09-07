@@ -1,4 +1,69 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-title: font-family: 'Staatliches', cursive;
+    --ff-texting: font-family: 'Palanquin', sans-serif;
+
+    font-size: 62.5% ;
+    --fs-title1: 4.0rem;
+    --fs-title2: 2.0rem;
+    --fs-text: 2.0rem ;
+
+    --bg-primary: #EFF1FF;
+    --bg-top: #8E9AAF;
+}
+
+.page, header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+main {
+    max-width: 32rem;
+    height: auto;
+}
+
+img {
+    max-width: 32rem;
+}
+
+
+header h1 {
+    font-size: var(--fs-title1);
+    font-family: var(--ff-title);
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 3.4rem;
+
+    text-align: center;
+    padding: 0.8rem 8.6rem;
+    background-color: #CBC0D3;
+
+    color: #FFFFFF;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+body::before {
+    content: '';
+    background-color: var(--bg-top);
+    position: absolute;
+    width: 100vw;
+    height: 280px;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
