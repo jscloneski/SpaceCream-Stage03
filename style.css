@@ -92,14 +92,45 @@ img {
     position: relative;
 }
 
+.card h2 {
+    position: absolute;
+    top: 3.6rem;
+    right: 1.6rem;
+    font-family: var(--ff-title);
+    font-size: var(--fs-title2);
+    font-weight: 400;
+    line-height: 3.4rem;
+    color: #4A4E69;
+
+    padding: 0.1rem 2.3rem;
+    background: #FEEAFA;
+    border-radius: 2.0rem;
+
+
+}
+
 .card img {
     border-radius: 2.0rem;
     object-fit: cover;
     transition: all 500ms;
     filter: brightness(0.5);
+    margin-top: 2.0rem;
 }
 
 .card img:hover {
     transform: scale(1.05);
     filter: blur(1px);
+}
+
+footer p {
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem;
+    font-family: var(--ff-texting);
+    font-size: var(--fs-text);
+    color: #23053A;
+}
+
+footer a {
+    text-decoration: none;
+    cursor: pointer;
 }
