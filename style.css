@@ -43,6 +43,9 @@ body::before {
 
 header {
     margin-top: 3.2rem;
+
+    animation-name: topdown;
+    animation-duration: 700ms;
 }
 
 header img {
@@ -75,6 +78,9 @@ header h1 {
 
     margin-top: 5.0rem;
     text-align: center;
+
+    animation-name: topdown;
+    animation-duration: 700ms;
 }
 
 main {
@@ -82,6 +88,8 @@ main {
 
     max-width: 32rem;
     height: auto;
+
+    animation: downtop 1200ms 500ms backwards;
 }
 
 img {
@@ -122,6 +130,10 @@ img {
     filter: blur(1px);
 }
 
+footer {
+    animation: downtop 1500ms 500ms backwards;
+}
+
 footer p {
     margin-top: 3.0rem;
     margin-bottom: 3.0rem;
@@ -133,4 +145,29 @@ footer p {
 footer a {
     text-decoration: none;
     cursor: pointer;
+    text-align: center;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
